@@ -5,7 +5,6 @@ using Mafi.Core.Buildings.Mine;
 using Mafi.Core.Products;
 using Mafi.Core.Prototypes;
 using Mafi.Localization;
-using Mafi.Unity;
 using Mafi.Unity.InputControl;
 using Mafi.Unity.InputControl.Inspectors;
 using Mafi.Unity.UiFramework;

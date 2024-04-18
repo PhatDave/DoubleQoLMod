@@ -35,12 +35,6 @@ namespace DoubleQoL {
         private void InitializePatchers(DependencyResolver resolver) {
             MineTowerPatcher.Instance?.Init(resolver);
             VehiclePatcher.Instance?.Init(resolver);
-            EdgeSizeLimitPatcher.Instance?.Init(resolver);
-            LogisticsStatusBarPatcher.Instance?.Init(resolver);
-            PopulationStatusBarPatcher.Instance?.Init(resolver);
-            ResearchPopupControllerPatcher.Instance?.Init(resolver);
-            ProductsDisplaysPatcher.Instance?.Init(resolver);
-            //BlueprintsControllerPatcher.Instance?.Init(resolver);
         }
 
         public void EarlyInit(DependencyResolver resolver) {

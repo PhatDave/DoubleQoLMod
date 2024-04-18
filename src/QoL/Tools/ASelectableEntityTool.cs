@@ -59,11 +59,6 @@ namespace DoubleQoL.QoL.Tools {
             Toolbox?.Hide();
         }
 
-        public override void RegisterUi(UiBuilder builder) {
-            //Toolbox?.RegisterUi(builder);
-            base.RegisterUi(builder);
-        }
-
         public override bool InputUpdate(IInputScheduler inputScheduler) {
             Toolbox?.CheckIsOn(IgnoreModifiers);
             return base.InputUpdate(inputScheduler);
