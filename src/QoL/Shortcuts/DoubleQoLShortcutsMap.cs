@@ -40,6 +40,9 @@ namespace DoubleQoL.QoL.Shortcuts {
         [Kb(KbCategory.Tools, "RecoverVehicleToolKb", "Recover Vehicle", null, true, false)]
         public KeyBindings RecoverVehicleToolKb { get; set; }
 
+        [Kb(KbCategory.Tools, "UpgradeVehicleToolKb", "Upgrade Vehicle", null, true, false)]
+        public KeyBindings UpgradeVehicleToolKb { get; set; }
+
         [Kb(KbCategory.General, "DevMode", "Disable/Enable Dev Mode", null, true, false)]
         public KeyBindings DevKeyKb { get; set; }
 
@@ -55,6 +58,7 @@ namespace DoubleQoL.QoL.Shortcuts {
             VehicleTankToolKb = KeyBindings.FromKey(KbCategory.Tools, ShortcutMode.Game, KeyCode.R);
             VehicleDumpToolKb = KeyBindings.FromKey(KbCategory.Tools, ShortcutMode.Game, KeyCode.F);
             RecoverVehicleToolKb = KeyBindings.FromPrimaryKeys(KbCategory.Tools, ShortcutMode.Game, KeyCode.LeftShift, KeyCode.E);
+            UpgradeVehicleToolKb = KeyBindings.FromPrimaryKeys(KbCategory.Tools, ShortcutMode.Game, KeyCode.LeftShift, KeyCode.F);
             ClearTruckCargoToolKb = KeyBindings.FromPrimaryKeys(KbCategory.Tools, ShortcutMode.Game, KeyCode.LeftShift, KeyCode.R);
 
             DevKeyKb = KeyBindings.FromKey(KbCategory.General, ShortcutMode.Game, ConfigManager.Instance.KeyCodes_Dev.Value);
