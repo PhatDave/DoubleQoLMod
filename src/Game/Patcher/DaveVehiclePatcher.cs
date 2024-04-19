@@ -20,7 +20,7 @@ namespace DoubleQoL.Game.Patcher {
             DrivingEntityProto from = Traverse.Create(__instance).Field("m_currentProto")
                 .GetValue<DrivingEntityProto>();
             DrivingEntityProto to = proto;
-            VehicleTool.UpgradeMap.Add(from, to);
+            VehicleTool.UpgradeMap[from] = to;
         }
 
         private static void Nothing() {
