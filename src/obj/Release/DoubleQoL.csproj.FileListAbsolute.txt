@@ -1,9 +1,0 @@
-C:\Users\Administrator\Seafile\Projects-Rider\RiderProjects\DoubleQoLMod\src\obj\Release\DoubleQoL.csproj.AssemblyReference.cache
-C:\Users\Administrator\Seafile\Projects-Rider\RiderProjects\DoubleQoLMod\src\obj\Release\DoubleQoL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Administrator\Seafile\Projects-Rider\RiderProjects\DoubleQoLMod\src\obj\Release\DoubleQoL.csproj.CoreCompileInputs.cache
-C:\Users\Administrator\Seafile\Projects-Rider\RiderProjects\DoubleQoLMod\src\obj\Release\DoubleQoL.sourcelink.json
-C:\Users\Administrator\AppData\Roaming\Captain of Industry\Mods\DoubleQoL\DoubleQoL.dll
-C:\Users\Administrator\AppData\Roaming\Captain of Industry\Mods\DoubleQoL\DoubleQoL.pdb
-C:\Users\Administrator\Seafile\Projects-Rider\RiderProjects\DoubleQoLMod\src\obj\Release\DoubleQoL.csproj.Up2Date
-C:\Users\Administrator\Seafile\Projects-Rider\RiderProjects\DoubleQoLMod\src\obj\Release\DoubleQoL.dll
-C:\Users\Administrator\Seafile\Projects-Rider\RiderProjects\DoubleQoLMod\src\obj\Release\DoubleQoL.pdb
