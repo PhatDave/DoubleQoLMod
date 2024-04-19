@@ -25,6 +25,7 @@ using Mafi.Unity.InputControl.Toolbar;
 using Mafi.Unity.UserInterface;
 using System;
 using System.Collections.Generic;
+using Mafi.Core;
 using UnityEngine;
 
 namespace DoubleQoL.QoL.Tools {
@@ -42,6 +43,9 @@ namespace DoubleQoL.QoL.Tools {
 
         public static Dictionary<DrivingEntityProto, DrivingEntityProto> UpgradeMap =
             new Dictionary<DrivingEntityProto, DrivingEntityProto>();
+
+        private static Dictionary<EntityId, bool> alreadyQueued =
+            new Dictionary<EntityId, bool>();
 
         private readonly Lyst<VehicleTypeInfo> vehicleTypeInfos = new Lyst<VehicleTypeInfo>() {
             new VehicleTypeInfo("Truck", DoubleQoLShortcutsMap.Instance.VehicleTrucksToolKb, Ids.Vehicles.TruckT1.Id,
@@ -153,13 +157,24 @@ namespace DoubleQoL.QoL.Tools {
             inputScheduler.ScheduleInputCmd(new RecoverVehicleCmd(v));
 
         public void TryUpgradeVehicle(IInputScheduler inputScheduler, Vehicle v) {
-            DrivingEntityProto target = null;
-            UpgradeMap.TryGetValue(v.Prototype, out target);
-            if (target == null) {
+            Console.WriteLine($"Trying to upgrade {v.Id} (v.ReplaceQueued: {v.ReplaceQueued})");
+            DrivingEntityProto target;
+
+            if (v.ReplaceQueued) {
+                Console.WriteLine($"{v.Id} already queued, quitting");
                 return;
             }
+
+            UpgradeMap.TryGetValue(v.Prototype, out target);
+            if (target == null) {
+                Console.WriteLine($"{v.Id} has no upgrade target");
+                return;
+            }
+
             Console.WriteLine($"{v.Prototype} -> {target}");
+            alreadyQueued.Add(v.Id, true);
             inputScheduler.ScheduleInputCmd(new ReplaceVehicleCmd(v.Id, target.Id));
+            Console.WriteLine($"Scheduling upgrade of {v.Id}");
         }
 
         public void Clear() {
